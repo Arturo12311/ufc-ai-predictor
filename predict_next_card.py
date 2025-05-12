@@ -4,7 +4,7 @@ from ufc_helpers import get_next_event_fighters, get_fighter_stats, calculate_di
 
 # ---------- Load Trained Model ----------
 print("📦 Loading trained model...")
-model = joblib.load("ufc_logistic_model.pkl")
+model = joblib.load("ufc_gb_model.pkl")
 print("✅ Model loaded.")
 
 # ---------- Get Next UFC Card ----------
@@ -36,5 +36,6 @@ for i, (red_url, blue_url) in enumerate(fight_list):
     print(f"🥋 {red_name} vs {blue_name}")
     print(f"🧠 Predicted Winner: {winner}")
     print(f"📊 Confidence: {confidence:.2%}\n")
+
 
 print("✅ All predictions complete.")
